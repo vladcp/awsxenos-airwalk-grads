@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AWSXenos Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    </headi>
+
+<body>
+    <div class="container">
+        <h1>AWSXenos Report</h1>
+        <hr>
+        <table id="data" class="table table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>Account Type</th>
+                    <th>Finding</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>aws_services</td>
+
+                    <td>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> ARN </th>
+                                    <th scope="col"> Principal </th>
+                                    <th scope="col"> Account Owner </th>
+                                    <th scope="col"> External ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>arn:aws:iam::123456789012:role/service-role/AWSCloud9SSMAccessRole</td>
+                                    <td>[cloud9.amazonaws.com, ec2.amazonaws.com]</td>
+                                    
+                                    <td> - 
+                                        </td>
+        
+                                   <td></td>
+                                    
+                                <tr>
+                                    <td>arn:aws:iam::123456789012:role/service-role/AWSDeepRacerAccessRole</td>
+                                    <td>[deepracer.amazonaws.com]</td>
+                                    
+                                    <td> - 
+                                        </td>
+                                 
+                                   <td></td>
+            
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>org_accounts</td>
+
+                    <td>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> ARN </th>
+                                    <th scope="col"> Principal </th>
+                                    <th scope="col"> Account Owner </th>
+                                    <th scope="col"> External ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>arn:aws:iam::123456789012:role/AWS-QuickSetup-StackSet-Local-ExecutionRole</td>
+                                    <td>[arn:aws:iam::00000000003:role/AWS-QuickSetup-StackSet-Local-AdministrationRole]</td>
+                                    
+                                    <td>Example Org Account - CREATED
+                                        ACTIVE</td>                         
+                                    
+                                   <td></td>      
+                                <tr>
+                                    <td>arn:aws:iam::123456789012:role/AWSCloudFormationStackSetExecutionRole</td>
+                                    <td>[arn:aws:iam::00000000002:root]</td>
+                                    
+                                    <td>Example Org Billing Account - INVITED
+                                        ACTIVE</td>
+                                    
+                                    
+                                   <td></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>unknown_accounts</td>
+
+                    <td>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> ARN </th>
+                                    <th scope="col"> Principal </th>
+                                    <th scope="col"> Account Owner </th>
+                                    <th scope="col"> External ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                    
+                                                               
+                                <tr>
+                                    <td>arn:aws:iam::123456789012:role/Notintheregister</td>
+                                    <td>['arn:aws:iam:666666666777:root']</td>
+                                    
+                                    <td> - 
+                                        </td>
+                                    
+                                    
+                                   <td>True</td>
+
+                                   <tr>                 
+                                    <td>arn:aws:iam::123456789012:role/TotallyLegitRole</td>
+                                    <td>['arn:aws:iam:666666666666:root']</td>
+                                    
+                                    <td> - 
+                                    </td>
+                                
+                                    <td class="bg-warning"> False  </td>
+                                    
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>known_accounts</td>
+
+                    <td>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> ARN </th>
+                                    <th scope="col"> Principal </th>
+                                    <th scope="col"> Account Owner </th>
+                                    <th scope="col"> External ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>arn:aws:iam::123456789012:role/Crowdstrike</td>
+                                    <td>[arn:aws:iam::292230061137:root]</td>
+                                    
+                                    <td>Crowdstrike Falcon - https://www.crowdstrike.com/falcon/2020/wp-content/uploads/2020/10/Crowdstrike-AWS-ControlTower-Implementation-Guide.pdf</td>
+                                    
+                                    
+                                   <td>True</td>
+                                   
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+
+</html>
