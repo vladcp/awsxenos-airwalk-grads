@@ -1,5 +1,5 @@
 def setupPythonEnv(){
-    sh "python3 -m venv ${env.WORKSPACE}/.venv"
+    sh script: "python3 -m venv ${env.WORKSPACE}/.venv"
     sh script: [
         "#!/bin/bash",
         "source ${env.WORKSPACE}/.venv/bin/activate",
@@ -21,16 +21,16 @@ pipeline {
         stage("Run Tests") {
             steps {
                 script {
-                    sh "source ${env.WORKSPACE}/.venv/bin/activate"
-                    sh "tox -e py"
+                    sh script: "source ${env.WORKSPACE}/.venv/bin/activate"
+                    sh script: "tox -e py"
                 }
             }
         }
         stage("Run Build") {
             steps {
                 script {
-                    sh "source ${env.WORKSPACE}/.venv/bin/activate"
-                    sh "python -m build"
+                    sh script: "source ${env.WORKSPACE}/.venv/bin/activate"
+                    sh script: "python -m build"
                 }
             }
         }
