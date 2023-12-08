@@ -21,7 +21,7 @@ pipeline {
         stage("Run Tests") {
             steps {
                 script {
-                    setupPythonEnv()
+                    sh "source ${env.WORKSPACE}/.venv/bin/activate"
                     sh "tox -e py"
                 }
             }
@@ -29,7 +29,7 @@ pipeline {
         stage("Run Build") {
             steps {
                 script {
-                    setupPythonEnv()
+                    sh "source ${env.WORKSPACE}/.venv/bin/activate"
                     sh "python -m build"
                 }
             }
