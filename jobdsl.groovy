@@ -1,6 +1,9 @@
 def repoUrl = getBinding().getVariables()["GIT_URL"]
 
 pipelineJob('aws-xenos-jenkins-build') {
+    triggers {
+    	gitHubPushTrigger()
+    }
     definition {
         cpsScm {
              scriptPath 'Jenkinsfile'
