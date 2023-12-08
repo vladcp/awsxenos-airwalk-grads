@@ -9,7 +9,7 @@ This tool reports against the [Trusted Relationship Technique](https://attack.mi
 * For the "known" accounts list AWSXenos uses a modified version of [known AWS Account IDs](https://github.com/rupertbg/aws-public-account-ids).
 * For the Org accounts list AWSXenos query AWS Organizations.
 * AWS Services are classified separately.
-* Everything else falls under unknown account
+* Everything else falls under unknown account!
 
 ## Example
 ![HTML Report Screenshot](screenshots/report.png)
